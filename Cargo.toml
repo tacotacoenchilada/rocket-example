@@ -1,0 +1,15 @@
+[package]
+name = "web-shit"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "*"
+serde = {features = ["derive"], version = "*"}
+serde_json = "*"
+[dependencies.rocket_contrib]
+version = "*"
+default-features = false
+features = ["json"]
