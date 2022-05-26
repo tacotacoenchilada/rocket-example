@@ -12,7 +12,7 @@ struct Message {
     message: String
 }
 
-#[get("/")]
+#[get("/shit")]
 fn index() -> Json<Message> {
       let message = Message {
          message: "shit".to_string()
