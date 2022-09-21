@@ -12,14 +12,14 @@ struct Message {
     message: String
 }
 
-#[get("/shit")]
+#[get("/hello")]
 fn index() -> Json<Message> {
       let message = Message {
-         message: "shit".to_string()
+         message: "Example!".to_string()
       };
      Json(message)
 }
 
 fn main() {
-               rocket::ignite().mount("/shit", routes![index]).launch();
+    rocket::ignite().mount("/hello", routes![index]).launch();
 }
